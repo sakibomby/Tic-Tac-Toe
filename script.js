@@ -19,7 +19,19 @@ const WINNING_COMBOS = [
 
 /*----- state variables -----*/
 
+let board;
+let turn;
+let winner;
 
 /*----- cached elements -----*/
+
+const message = document.querySelector('h1');
+const playAgainBtn = document.querySelector('button');
+const squares =-  [...document.querySelectorAll('#board > div')];
+
 /*----- event listeners -----*/
+
+document.getElementById('board').addEventListener('click', handleMove);
+playAgainBtn.addEventListener('click', init);
+
 /*----- functions -----*/
